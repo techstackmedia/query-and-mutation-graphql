@@ -20,7 +20,7 @@ const typeDefs = buildSchema(`
     type Engineering {
         name: String
         noofEmployees: Int
-        employee_Id: [Int]
+        employee_Id: [ID]
         manager: Int
     }
 

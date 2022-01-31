@@ -7,20 +7,20 @@ app.use(morgan("dev"));
 
 const resolvers = {
   Query: {
-    user() {
+    staff() {
       return {
         id: "1345324451",
         company: "Dangote",
         employee: [
-          { id: 3, name: "Jacky" },
-          { id: 4, name: "Michael" },
+          { id: "232341234", name: "Jacky" },
+          { id: "23513421", name: "Michael" },
         ],
         departments: [
           {
             engineering: {
               name: "Bob",
               noofEmployees: 45,
-              employee_Id: [2, 4, 7, 3],
+              employee_Id: ["7883563", "134235", "23561436", "21311235"],
               manager: 3,
             },
           },
