@@ -25,7 +25,7 @@ const typeDefs = buildSchema(`
     }
 
     type Query {
-        user: [Staff]
+        staff: Staff
     }
 
 `);
