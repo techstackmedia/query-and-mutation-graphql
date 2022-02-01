@@ -1,0 +1,18 @@
+{
+  staff {
+    id
+    company
+    employee {
+      id
+      name
+    }
+    departments {
+      engineering {
+        name
+        noofEmployees
+        employee_Id
+        manager
+      }
+    }
+  }
+}
