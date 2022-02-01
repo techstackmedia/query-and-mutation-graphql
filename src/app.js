@@ -3,28 +3,35 @@ const app = express();
 import morgan from "morgan";
 import { graphqlHTTP } from "express-graphql";
 import { typeDefs } from "./schema.js";
+import { nanoid } from "nanoid";
 app.use(morgan("dev"));
 
 const resolvers = {
   staff() {
     return {
-      id: "1345324451",
+      id: nanoid(),
+      createdAt: Date.now(),
       company: "Dangote",
       employee: [
-        { id: "232341234", name: "Jacky" },
-        { id: "23513421", name: "Michael" },
+        { id: nanoid(), name: nanoid() },
+        { id: nanoid(), name: nanoid() },
       ],
       departments: [
         {
           engineering: {
             name: "Bob",
             noofEmployees: 45,
-            employee_Id: ["7883563", "134235", "23561436", "21311235"],
+            employee_Id: [nanoid(), nanoid(), nanoid(), nanoid()],
             manager: 3,
           },
         },
       ],
     };
+  },
+  Mutation: {
+    staff(_, { input }) {
+      return input;
+    },
   },
 };
 

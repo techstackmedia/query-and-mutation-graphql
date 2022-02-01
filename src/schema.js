@@ -2,7 +2,8 @@ import { buildSchema } from "graphql";
 
 const typeDefs = buildSchema(`
     type Staff {
-        id: ID
+        id: ID!
+        createdAt: String
         company: String
         employee: [User]
         departments: [Department]
@@ -24,7 +25,7 @@ const typeDefs = buildSchema(`
         manager: Int
     }
 
-    input NewStaffInput {
+    input StaffInput {
         id: ID
         company: String
     }
@@ -34,9 +35,8 @@ const typeDefs = buildSchema(`
     }
 
     type Mutation {
-        staff(input: NewStaffInput): Staff
+        staff(input: StaffInput): Staff
     }
-
 `);
 
 export { typeDefs };
