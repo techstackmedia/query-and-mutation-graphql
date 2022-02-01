@@ -8,21 +8,20 @@ app.use(morgan("dev"));
 
 const resolvers = {
   staff() {
-    const id = nanoid();
     return {
-      _id: id,
+      id: nanoid(),
       createdAt: Date.now(),
       company: "Dangote",
       employee: [
-        { _id: id, name: id },
-        { _id: id, name: id },
+        { id: nanoid(), name: "Jerry" },
+        { id: nanoid(), name: "John" },
       ],
       departments: [
         {
           engineering: {
             name: "Bob",
             noofEmployees: 45,
-            employee_Id: [id, id, id, id],
+            employee_Id: [nanoid(), nanoid(), nanoid(), nanoid()],
             manager: 3,
           },
         },

@@ -1,19 +1,26 @@
 {
-    staff {
+  staff {
+    id
+    company
+    createdAt
+    employee {
       id
-      company
-      createdAt
-      employee {
-        id
+      name
+    }
+    departments {
+      engineering {
         name
-      }
-      departments {
-        engineering {
-          name
-          noofEmployees
-          employee_Id
-          manager
-        }
+        noofEmployees
+        employee_Id
+        manager
       }
     }
   }
+}
+
+# mutation {
+#   staff(input: {id: "324535", company: "Decagon"}) {
+#     id
+#     company
+#   }
+# }
