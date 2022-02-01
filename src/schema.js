@@ -24,8 +24,16 @@ const typeDefs = buildSchema(`
         manager: Int
     }
 
+    input NewStaffInput {
+        id: ID
+    }
+
     type Query {
         staff: Staff
+    }
+
+    type Mutation {
+        staff(input: NewStaffInput): Staff
     }
 
 `);
