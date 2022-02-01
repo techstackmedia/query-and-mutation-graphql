@@ -1,0 +1,19 @@
+{
+    staff {
+      id
+      company
+      createdAt
+      employee {
+        id
+        name
+      }
+      departments {
+        engineering {
+          name
+          noofEmployees
+          employee_Id
+          manager
+        }
+      }
+    }
+  }

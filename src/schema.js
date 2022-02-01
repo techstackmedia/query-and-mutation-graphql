@@ -2,7 +2,7 @@ import { buildSchema } from "graphql";
 
 const typeDefs = buildSchema(`
     type Staff {
-        id: ID!
+        _id: ID!
         createdAt: String
         company: String
         employee: [User]
