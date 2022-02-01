@@ -26,6 +26,7 @@ const typeDefs = buildSchema(`
 
     input NewStaffInput {
         id: ID
+        company: String
     }
 
     type Query {
