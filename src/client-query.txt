@@ -1,4 +1,4 @@
-{
+query Q{
   staff {
     id
     company
@@ -18,9 +18,9 @@
   }
 }
 
-# mutation {
-#   staff(input: {id: "324535", company: "Decagon"}) {
-#     id
-#     company
-#   }
-# }
+mutation M {
+  staff(input: {id: "324535", company: "Decagon"}) {
+    id
+    company
+  }
+}
